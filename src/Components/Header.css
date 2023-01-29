@@ -1,0 +1,131 @@
+.Header{
+    height:80px;
+    display: flex;
+    margin:0 150px;
+}
+.Header-heading{
+    display: flex;
+    align-items: center;
+    width:10%;
+    justify-content: flex-start;
+    font-size:30px;
+    font-weight: bolder;
+}
+.nav-items{
+    display: flex;
+    width:70%;
+    align-items: center;
+    justify-content: flex-start;
+}
+.auth-items{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:20%;
+}
+.nav-item{
+    width:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:grey;
+    font-weight:bolder;
+    cursor:pointer;
+    transition :1.5s;
+}
+.auth-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:grey;
+    font-weight:bolder;
+    width:100px;
+    cursor:pointer;
+    transition: 1.5s;
+}
+.signup-btn,.mob-signup-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(180, 66%, 49%);
+    color:white;
+    height: 40px;
+    width:90px;
+    border-radius: 25px;
+    cursor:pointer;
+    border:none;
+    transition: 1.5s;
+}
+.nav-item:hover, .auth-item:hover{
+    color:black;
+}
+.signup-btn:hover{
+    transform: scale(1.1);
+}
+.mob-navbar{
+    display: none;
+    border: none;
+    background-color: inherit;
+}
+.navbar-popup-div{
+    width:100vw;
+    height:100vh;
+    top:0;
+    z-index: 99999;
+    position: fixed;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    display: none;
+}
+.navbar-pop{
+    width:300px;
+    height:350px;
+    background-color: hsl(257, 27%, 26%);
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.navbar-item{
+    cursor:pointer;
+    margin:10px 0px;
+    color:white;
+}
+.mob-signup-btn{
+    margin-top: 30px;
+}
+.close-popup{
+    position: relative;
+    color: white;
+    top:-20px;
+    left:100px;
+    cursor: pointer;
+    background-color: inherit;
+    border:none;
+}
+
+@media screen and (max-width:1200px) {
+    .Header-heading{
+        width:20%;
+    }
+    .nav-items{
+        width:60%;
+    }
+}
+@media screen and (max-width:1000px) {
+    .nav-item, .auth-item, .signup-btn{
+        display: none;
+    }
+    .mob-navbar{
+        display: block;
+    }
+} 
+@media screen and (max-width:850px){
+    .Header{
+        margin: 0;
+        padding: 0 20px;
+    }
+}
