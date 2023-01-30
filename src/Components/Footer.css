@@ -85,7 +85,7 @@
         margin: 0;
     }
 }
-@media screen and (max-width:450px){
+@media screen and (max-width:600px){
     .social-medias{
         width:40%;
         justify-content: center;

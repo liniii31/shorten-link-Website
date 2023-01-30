@@ -26,7 +26,16 @@ function Maindown() {
         setLink(e.target.value);
     }
     function Copy(e){
-
+        let idx = parseInt(e.target.id);
+        let inputElement = document.createElement('input');
+        inputElement.type = 'text';
+        inputElement.value = shortlink[idx];
+        document.body.appendChild(inputElement);
+        inputElement.select();
+        document.execCommand('copy');
+        document.body.removeChild(inputElement);
+        document.getElementById(e.target.id).style.backgroundColor = "hsl(257, 27%, 26%)";
+        document.getElementById(e.target.id).innerHTML = "copied!";
     }
     return (
         <div className='main-down'>
@@ -42,7 +51,7 @@ function Maindown() {
                         <div className='result' key={index}>
                             <p>Short Link { index+1 }</p>
                             <p>{value}</p>
-                            <p><button className='copy' onClick={e=>Copy(e)}>Copy</button></p>
+                            <p><button id={index.toString()} className='copy' onClick={e=>Copy(e)}>Copy</button></p>
                         </div>
             )}
             </div>
